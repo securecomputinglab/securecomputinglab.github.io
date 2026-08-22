@@ -1,0 +1,284 @@
+/* ──────────────────────────────────────────
+   UA Secure Computing Lab — main stylesheet
+   Mirrors the clean two-column academic
+   style of quinnburke.net
+   ────────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:   #002147;
+  --blue:   #005fa3;
+  --accent: #ab0520;   /* UA red */
+  --light:  #f8f8f8;
+  --border: #e0e0e0;
+  --text:   #222;
+  --muted:  #555;
+  --max-w:  860px;
+  --font:   'Helvetica Neue', Arial, sans-serif;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: #fff;
+  line-height: 1.65;
+}
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Top navigation ───────────────────── */
+.top-nav {
+  background: var(--navy);
+  border-bottom: 3px solid var(--accent);
+}
+
+.top-nav__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.top-nav__name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 0.75rem 1.25rem 0.75rem 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.top-nav__links {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+}
+
+.top-nav__links li a {
+  display: block;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+  padding: 0.75rem 0.85rem;
+  transition: color .15s, background .15s;
+}
+
+.top-nav__links li a:hover,
+.top-nav__links li a.active {
+  color: #fff;
+  background: rgba(255,255,255,0.1);
+  text-decoration: none;
+}
+
+.top-nav__links li a.active {
+  border-bottom: 3px solid var(--accent);
+}
+
+/* ── Sub navigation ───────────────────── */
+.sub-nav {
+  background: var(--light);
+  border-bottom: 1px solid var(--border);
+}
+
+.sub-nav__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  list-style: none;
+  gap: 0;
+}
+
+.sub-nav__inner li a {
+  display: block;
+  color: var(--muted);
+  font-size: 0.88rem;
+  padding: 0.55rem 1rem;
+  border-bottom: 2px solid transparent;
+  transition: color .15s, border-color .15s;
+}
+
+.sub-nav__inner li a:hover,
+.sub-nav__inner li a.active {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+  text-decoration: none;
+}
+
+/* ── Page content ─────────────────────── */
+.page-wrap {
+  max-width: var(--max-w);
+  margin: 2.5rem auto 4rem;
+  padding: 0 1.25rem;
+}
+
+/* ── Section headings ─────────────────── */
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.4rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 2rem 0 0.6rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 1.25rem 0 0.3rem;
+}
+
+p { margin-bottom: 0.9rem; }
+
+/* ── Research areas grid ─────────────── */
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.area-card {
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 0.85rem 1rem;
+  border-radius: 3px;
+}
+
+.area-card strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--navy);
+}
+
+.area-card p { font-size: 0.88rem; color: var(--muted); margin: 0; }
+
+/* ── Publications list ───────────────── */
+.pub-year {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 1.75rem 0 0.5rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.pub-entry {
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+
+.pub-entry:last-child { border-bottom: none; }
+
+.pub-title {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.pub-venue {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.pub-authors { color: var(--muted); font-size: 0.88rem; }
+
+.pub-links { margin-top: 0.25rem; font-size: 0.83rem; }
+.pub-links a { margin-right: 0.6rem; color: var(--blue); }
+
+/* ── People grid ─────────────────────── */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-top: 0.75rem;
+}
+
+.person-card {
+  text-align: center;
+  padding: 1.1rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--light);
+}
+
+.person-card .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0 auto 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #888;
+  overflow: hidden;
+}
+
+.person-card .avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.person-card strong { display: block; font-size: 0.95rem; color: var(--navy); }
+.person-card .role  { font-size: 0.82rem; color: var(--muted); margin-top: 0.1rem; }
+.person-card .links { font-size: 0.8rem; margin-top: 0.4rem; }
+.person-card .links a { margin: 0 0.3rem; }
+
+/* ── Code / Repos ────────────────────── */
+.repo-list { margin-top: 0.75rem; }
+
+.repo-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.repo-entry:last-child { border-bottom: none; }
+
+.repo-icon {
+  font-size: 1.4rem;
+  color: var(--muted);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.repo-entry strong { display: block; color: var(--navy); font-size: 0.95rem; }
+.repo-entry p { font-size: 0.88rem; color: var(--muted); margin: 0.2rem 0 0; }
+
+/* ── Utility ─────────────────────────── */
+.badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.15em 0.5em;
+  border-radius: 3px;
+  margin-left: 0.35rem;
+  vertical-align: middle;
+  background: #e8f0fb;
+  color: var(--blue);
+}
+
+.badge.red { background: #fce8e8; color: var(--accent); }
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #aaa;
+  padding: 2rem 1rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
