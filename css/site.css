@@ -1,0 +1,407 @@
+/* Shared site styles: Arizona Bootstrap theme overrides
+ *
+ * Everything above the "Lab-specific components" section is a verbatim copy of
+ * css/site.css on quinnburke.net, so the two sites render identically. Edit it
+ * there first, then copy the file across; put lab-only rules in the section at
+ * the bottom, which quinnburke.net does not carry. */
+
+:root {
+    font-size: 20px;
+    --bs-body-bg: #f5f5f5;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/* ── Navbar (red brand bar with site menu) ── */
+.navbar-az {
+    background-color: var(--bs-red);
+}
+.navbar-az .container { max-width: 1200px; }
+.navbar-az .navbar-brand .arizona-line-logo { margin-left: 0; }
+.navbar-az .nav-link {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    border-bottom: 3px solid transparent;
+}
+/* Arizona Bootstrap marks the current link with a grey pill and its own red
+   text-underline. Both are suppressed here: the border-bottom is the indicator. */
+.navbar-az .nav-link:hover,
+.navbar-az .nav-link.active,
+.navbar-az .nav-link:active {
+    color: #fff;
+    background-color: transparent;
+    border-radius: 0;
+    text-decoration: none;
+    border-bottom-color: #fff;
+}
+
+/* ── Per-page sub-menu (blue bar) ──
+   Carries navbar-az as well, so it inherits Arizona Bootstrap's condensed
+   navbar font; the rules below are declared after the .navbar-az ones and so
+   win on colour. Wrap it and the red navbar in one .sticky-top (rather than
+   making each sticky, which would pin both to top:0 and overlap them):
+
+   <div class="sticky-top">
+       <nav class="navbar navbar-expand-md navbar-dark navbar-az py-0"> ... </nav>
+       <nav class="navbar-az subnav-az" id="page-subnav">
+           <div class="container d-flex flex-wrap">
+               <a class="nav-link active" href="#overview">Overview</a>
+               <a class="nav-link" href="#syllabus">Syllabus</a>
+           </div>
+       </nav>
+   </div>
+
+   .active is not static: Bootstrap's scrollspy moves it as the page scrolls.
+   Put this on <body> and give each target section a scroll-margin-top that
+   matches the root-margin top inset (see the course page for a worked example):
+
+   <body data-bs-spy="scroll" data-bs-target="#page-subnav"
+         data-bs-root-margin="-120px 0px -40%">
+
+   Leave data-bs-smooth-scroll off: its click handler scrolls to the raw
+   offsetTop and ignores scroll-margin-top, dropping headings behind the bars.
+*/
+.subnav-az {
+    background-color: var(--bs-blue);
+}
+.subnav-az .container { max-width: 1200px; }
+.subnav-az .nav-link {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-bottom: 3px solid transparent;
+}
+.subnav-az .nav-link:hover,
+.subnav-az .nav-link.active,
+.subnav-az .nav-link:active {
+    color: #fff;
+    background-color: transparent;
+    border-radius: 0;
+    text-decoration: none;
+    border-bottom-color: var(--bs-sky);
+}
+
+/* ── Layout ── */
+.container-narrow {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ── Section headings ── */
+.section-title {
+    font-weight: 700;
+    color: var(--bs-blue);
+    font-size: 1.4rem;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.1rem;
+    border-bottom: 3px solid var(--bs-red);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.section-title i { color: var(--bs-red); font-size: 1.1rem; }
+
+.card-heading {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--bs-blue);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    line-height: 1.3;
+}
+.card-heading i { color: var(--bs-red); }
+
+/* ── Profile ── */
+.profile-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 6px 24px rgba(12, 35, 75, 0.18);
+    flex-shrink: 0;
+}
+
+.name-title {
+    font-weight: 800;
+    color: var(--bs-blue);
+    letter-spacing: -0.01em;
+    margin-bottom: 0.35rem;
+}
+
+.subtitle {
+    color: #495057;
+    margin-bottom: 0.9rem;
+}
+
+.contact-row {
+    color: #495057;
+    margin-bottom: 0.35rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.contact-row i { color: var(--bs-red); font-size: 0.9rem; width: 16px; }
+.contact-row a { color: #495057; }
+.contact-row a:hover { color: var(--bs-red); }
+
+.social-icons { margin-top: 1rem; }
+.social-icons a {
+    color: var(--bs-blue);
+    font-size: 1.25rem;
+    transition: color 0.2s, transform 0.2s;
+    display: inline-block;
+}
+.social-icons a:hover {
+    color: var(--bs-red);
+    transform: translateY(-3px);
+}
+
+/* ── Callout ── */
+.az-callout {
+    background-color: var(--bs-cool-gray);
+    border-left: 5px solid var(--bs-azurite);
+    padding: 1rem 1.25rem;
+    margin-top: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+.az-callout i { color: var(--bs-azurite); }
+
+/* ── News ── */
+.news-list { list-style: none; padding: 0; margin: 0; }
+.news-list li {
+    padding: 0.65rem 0;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    gap: 0.6rem;
+    line-height: 1.6;
+}
+.news-list li:last-child { border-bottom: none; }
+.news-list li::before {
+    content: '▸';
+    color: var(--bs-red);
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+.news-list b { color: var(--bs-blue); }
+
+/* ── Publications ── */
+.pub-entry {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-left: 4px solid var(--bs-red);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 0.75rem;
+    transition: box-shadow 0.2s;
+}
+.pub-entry:hover { box-shadow: 0 4px 16px rgba(12, 35, 75, 0.12); }
+.pub-entry:last-child { margin-bottom: 0; }
+
+.pub-title { font-weight: 700; color: var(--bs-blue); line-height: 1.4; margin-bottom: 0.25rem; }
+.pub-authors { margin-bottom: 0.2rem; }
+.pub-venue { font-style: italic; color: #495057; margin-bottom: 0.6rem; }
+
+.pub-links { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.pub-links .btn {
+    --bs-btn-padding-y: 0.15rem;
+    --bs-btn-padding-x: 0.65rem;
+    --bs-btn-font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.scholar-note { color: #495057; margin-bottom: 1.5rem; }
+
+/* ── Research page ── */
+.research-img {
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 4px 20px rgba(12, 35, 75, 0.1);
+    max-width: 100%;
+    display: block;
+    margin: 0 auto 1.5rem;
+    width: 55%;
+}
+
+.kw-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--bs-red);
+    margin-bottom: 0.3rem;
+    margin-top: 1rem;
+}
+
+/* ── Footer ── */
+.az-footer {
+    background-color: var(--bs-blue);
+    border-top: 5px solid var(--bs-red);
+    color: rgba(255, 255, 255, 0.85);
+}
+.az-footer a { color: #fff; }
+
+
+/* ══ Lab-specific components ══
+   Rules below exist only on the lab site. They reuse the card treatment of
+   .pub-entry above (white panel, hairline border, red left rule), so the
+   grids read as the same system as the publication list. */
+
+/* ── Research areas / topic cards ── */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0.75rem;
+}
+
+.area-card {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-left: 4px solid var(--bs-red);
+    padding: 1.1rem 1.3rem;
+    transition: box-shadow 0.2s;
+}
+/* Only the three expandable cards lift on hover; a hover response on the static
+   three would advertise a click that does nothing. */
+.area-card-toggle:hover { box-shadow: 0 4px 16px rgba(12, 35, 75, 0.12); }
+.area-card .area-name {
+    font-weight: 700;
+    color: var(--bs-blue);
+    line-height: 1.4;
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.area-card .area-name i { color: var(--bs-red); font-size: 0.9rem; }
+.area-card p { color: #495057; font-size: 0.9rem; margin-bottom: 0; }
+
+/* ── Expandable research areas ──
+   Three of the area cards carry a longer write-up. The trigger is an <a role="button">
+   rather than a <button>: a button's content model is phrasing content only, so the
+   <div>/<p> card markup would be invalid inside one, whereas <a> is transparent and
+   keeps the clickable cards byte-identical to the static ones. Bootstrap's collapse
+   data-api calls preventDefault() on anchor triggers, so the href never jumps the
+   page; it is there as a no-JS fallback. Detail panels sit outside the grid (see
+   index.html) so an open panel spans the full width rather than stretching one grid
+   row; Bootstrap animates the height and toggles aria-expanded, which is what the
+   open-state styling below keys off. */
+.area-card-toggle {
+    display: block;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+    /* .area-card already sets background, padding, and the red left rule. */
+}
+.area-card-toggle:hover { color: inherit; text-decoration: none; }
+
+.area-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--bs-red);
+}
+.area-more i { font-size: 0.7rem; transition: transform 0.2s ease-in-out; }
+@media (prefers-reduced-motion: reduce) { .area-more i { transition: none; } }
+
+.area-card-toggle[aria-expanded="true"] {
+    background: var(--bs-cool-gray);
+    box-shadow: 0 4px 16px rgba(12, 35, 75, 0.12);
+}
+.area-card-toggle[aria-expanded="true"] .area-more i { transform: rotate(180deg); }
+
+/* ── Research area detail panels ──
+   The gap above the panel lives on .area-detail, not on the .collapse wrapper, so
+   it simply is not rendered while the wrapper is display:none; .collapsing clips
+   with overflow:hidden, so it does not disturb the height animation either. */
+.area-detail {
+    margin-top: 0.75rem;
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-top: 4px solid var(--bs-red);
+    padding: 1.5rem 1.5rem 1.3rem;
+}
+.area-detail > *:last-child { margin-bottom: 0; }
+.area-detail ul:last-child { margin-bottom: 0; }
+
+/* ── People ── */
+.people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 0.75rem;
+}
+
+.person-card {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-top: 4px solid var(--bs-red);
+    padding: 1.3rem 1.1rem;
+    text-align: center;
+    transition: box-shadow 0.2s;
+}
+.person-card:hover { box-shadow: 0 4px 16px rgba(12, 35, 75, 0.12); }
+
+.person-card .avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 0.75rem;
+    display: block;
+    box-shadow: 0 4px 16px rgba(12, 35, 75, 0.18);
+}
+/* Placeholder for members without a photo yet. */
+.person-card .avatar-blank {
+    background: var(--bs-cool-gray);
+    color: var(--bs-blue);
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+}
+
+.person-card .person-name { font-weight: 700; color: var(--bs-blue); line-height: 1.3; }
+.person-card .person-role { color: #495057; font-size: 0.85rem; margin-top: 0.15rem; }
+.person-card .person-links { margin-top: 0.5rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; }
+
+/* Empty-roster note, e.g. "no alumni yet". */
+.roster-empty { color: #495057; font-style: italic; margin-bottom: 0; }
+
+/* ── Code / repositories ── */
+.repo-entry {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-left: 4px solid var(--bs-red);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    transition: box-shadow 0.2s;
+}
+.repo-entry:hover { box-shadow: 0 4px 16px rgba(12, 35, 75, 0.12); }
+.repo-entry:last-child { margin-bottom: 0; }
+
+.repo-entry > i {
+    color: var(--bs-red);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+.repo-name { font-weight: 700; color: var(--bs-blue); line-height: 1.4; margin-bottom: 0.2rem; }
+.repo-desc { color: #495057; margin-bottom: 0.6rem; }
+.repo-entry .pub-links { margin-top: 0; }

@@ -1,76 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>People — UA Secure Computing Lab</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Computing Lab: People</title>
+    <link rel="stylesheet" href="https://use.typekit.net/emv3zbo.css">
+    <link href="https://cdn.digital.arizona.edu/lib/arizona-bootstrap/5.1.1/css/arizona-bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-Q2ESMuWgX+vvxe/YNIMpv4B2IrnXY4pftywzhO9l8b+QWfEqEswTxXz28vbNfNX9"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/site.css">
 </head>
+
 <body>
+    <nav class="navbar navbar-expand-md navbar-dark navbar-az sticky-top py-0">
+        <div class="container">
+            <a href="https://www.arizona.edu" class="navbar-brand py-2" title="The University of Arizona homepage">
+                <img class="arizona-line-logo"
+                     alt="The University of Arizona Wordmark Line Logo White"
+                     src="https://cdn.digital.arizona.edu/logos/v1.0.0/ua_wordmark_line_logo_white_rgb.min.svg">
+            </a>
+            <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar-menu" class="collapse navbar-collapse">
+                <div class="ms-auto navbar-nav">
+                    <a class="nav-link" href="./">About</a>
+                    <a class="nav-link active" href="people.html">People</a>
+                    <a class="nav-link" href="publications.html">Publications</a>
+                    <a class="nav-link" href="code.html">Code</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<!-- ── Top navigation ── -->
-<nav class="top-nav" aria-label="Site navigation">
-  <div class="top-nav__inner">
-    <span class="top-nav__name">Quinn Burke</span>
-    <ul class="top-nav__links">
-      <li><a href="https://www.quinnburke.net/">Home</a></li>
-      <li><a href="https://www.quinnburke.net/research/">Research</a></li>
-      <li><a href="https://www.quinnburke.net/publications/">Publications</a></li>
-      <li><a href="https://www.quinnburke.net/teaching/">Teaching</a></li>
-      <li><a href="https://www.quinnburke.net/prospective/">Prospective Students</a></li>
-      <li><a href="https://www.quinnburke.net/cv.pdf">CV</a></li>
-      <li><a href="index.html" class="active">Lab</a></li>
-    </ul>
-  </div>
-</nav>
+    <div class="container container-narrow mt-4 pb-5 px-3">
 
-<!-- ── Sub navigation ── -->
-<nav class="sub-nav" aria-label="Lab section navigation">
-  <ul class="sub-nav__inner">
-    <li><a href="index.html">About</a></li>
-    <li><a href="people.html" class="active">People</a></li>
-    <li><a href="publications.html">Publications</a></li>
-    <li><a href="code.html">Code</a></li>
-  </ul>
-</nav>
+        <!-- Faculty -->
+        <div class="mb-5">
+            <h2 class="section-title"><i class="fa-solid fa-user-tie"></i> Faculty</h2>
+            <div class="people-grid">
+                <div class="person-card">
+                    <img src="img/quinn-burke.jpg" alt="Quinn Burke" class="avatar">
+                    <div class="person-name">Quinn Burke</div>
+                    <div class="person-role">Principal Investigator<br>Assistant Professor</div>
+                    <div class="person-links">
+                        <a class="btn btn-outline-red" href="https://www.quinnburke.net/">Website</a>
+                        <a class="btn btn-outline-red" href="https://www.quinnburke.net/cv.pdf" target="_blank">CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<!-- ── Page content ── -->
-<main class="page-wrap">
+        <!-- Students -->
+        <div class="mb-5">
+            <h2 class="section-title"><i class="fa-solid fa-user-graduate"></i> Students</h2>
+            <p class="roster-empty">
+                We are recruiting our first PhD students. See
+                <a href="./#joining">how to join</a>.
+            </p>
+        </div>
 
-  <h1>People</h1>
+        <!-- Alumni -->
+        <!-- <div class="mb-5">
+            <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Alumni</h2>
+            <p class="roster-empty">Coming soon.</p>
+        </div> -->
 
-  <!-- Faculty -->
-  <h2>Faculty</h2>
-  <div class="people-grid">
-    <div class="person-card">
-      <div class="avatar">🎓</div>
-      <strong>Quinn Burke</strong>
-      <div class="role">Principal Investigator<br>Assistant Professor</div>
-      <div class="links">
-        <a href="https://www.quinnburke.net/">Website</a>
-        <a href="https://www.quinnburke.net/cv.pdf">CV</a>
-      </div>
     </div>
-  </div>
 
-  <!-- PhD Students -->
-  <h2>PhD Students</h2>
-  <p style="color:var(--muted); font-size:0.9rem;">
-    Interested in joining? See the
-    <a href="https://www.quinnburke.net/prospective/">Prospective Students</a> page.
-  </p>
+    <footer class="az-footer py-4">
+        <div class="container container-narrow px-3 d-flex flex-wrap justify-content-between gap-2 small">
+            <span>© 2026 Secure Computing Lab</span>
+            <span><a href="https://cs.arizona.edu/">Department of Computer Science</a> · <a href="https://www.arizona.edu/">The University of Arizona</a></span>
+        </div>
+    </footer>
 
-  <!-- Alumni -->
-  <h2>Alumni</h2>
-  <p style="color:var(--muted); font-size:0.9rem;">Coming soon.</p>
-
-</main>
-
-<footer>
-  &copy; 2026 UA Secure Computing Lab &nbsp;·&nbsp;
-  <a href="https://www.cs.arizona.edu/">University of Arizona Computer Science</a> &nbsp;·&nbsp;
-  <a href="https://github.com/UA-Secure-Computing-Lab">GitHub</a>
-</footer>
-
+    <script src="https://cdn.digital.arizona.edu/lib/arizona-bootstrap/5.1.1/js/arizona-bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

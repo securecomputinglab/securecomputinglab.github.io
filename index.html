@@ -1,124 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — UA Secure Computing Lab</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Computing Lab: About</title>
+    <link rel="stylesheet" href="https://use.typekit.net/emv3zbo.css">
+    <link href="https://cdn.digital.arizona.edu/lib/arizona-bootstrap/5.1.1/css/arizona-bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-Q2ESMuWgX+vvxe/YNIMpv4B2IrnXY4pftywzhO9l8b+QWfEqEswTxXz28vbNfNX9"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/site.css">
 </head>
+
 <body>
+    <nav class="navbar navbar-expand-md navbar-dark navbar-az sticky-top py-0">
+        <div class="container">
+            <a href="https://www.arizona.edu" class="navbar-brand py-2" title="The University of Arizona homepage">
+                <img class="arizona-line-logo"
+                     alt="The University of Arizona Wordmark Line Logo White"
+                     src="https://cdn.digital.arizona.edu/logos/v1.0.0/ua_wordmark_line_logo_white_rgb.min.svg">
+            </a>
+            <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar-menu" class="collapse navbar-collapse">
+                <div class="ms-auto navbar-nav">
+                    <a class="nav-link active" href="./">About</a>
+                    <a class="nav-link" href="people.html">People</a>
+                    <a class="nav-link" href="publications.html">Publications</a>
+                    <a class="nav-link" href="code.html">Code</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<!-- ── Top navigation ── -->
-<nav class="top-nav" aria-label="Site navigation">
-  <div class="top-nav__inner">
-    <span class="top-nav__name">Quinn Burke</span>
-    <ul class="top-nav__links">
-      <li><a href="https://www.quinnburke.net/">Home</a></li>
-      <li><a href="https://www.quinnburke.net/research/">Research</a></li>
-      <li><a href="https://www.quinnburke.net/publications/">Publications</a></li>
-      <li><a href="https://www.quinnburke.net/teaching/">Teaching</a></li>
-      <li><a href="https://www.quinnburke.net/prospective/">Prospective Students</a></li>
-      <li><a href="https://www.quinnburke.net/cv.pdf">CV</a></li>
-      <li><a href="index.html" class="active">Lab</a></li>
-    </ul>
-  </div>
-</nav>
+    <div class="container container-narrow mt-4 pb-5 px-3">
 
-<!-- ── Sub navigation ── -->
-<nav class="sub-nav" aria-label="Lab section navigation">
-  <ul class="sub-nav__inner">
-    <li><a href="index.html" class="active">About</a></li>
-    <li><a href="people.html">People</a></li>
-    <li><a href="publications.html">Publications</a></li>
-    <li><a href="code.html">Code</a></li>
-  </ul>
-</nav>
+        <!-- Lab header -->
+        <div class="mb-4">
+            <h1 class="name-title">Secure Computing Lab</h1>
+            <p class="subtitle">
+                <a href="https://cs.arizona.edu/">Department of Computer Science</a><br><a href="https://www.arizona.edu/">University of Arizona</a>
+            </p>
+            <div class="contact-row"><i class="fa-solid fa-envelope"></i><a href="mailto:qkb@arizona.edu">qkb@arizona.edu</a></div>
+        </div>
 
-<!-- ── Page content ── -->
-<main class="page-wrap">
+        <!-- About -->
+        <div class="mb-5">
+            <h2 class="section-title"><i class="fa-regular fa-id-card"></i> About the lab</h2>
+            <p>
+                The Secure Computing Lab (SCL) is a research laboratory in the <a href="https://cs.arizona.edu/">Department of Computer Science</a> at the <a href="https://www.arizona.edu/">University of Arizona</a> that examines cutting-edge problems in cybersecurity. It is led by <a href="https://www.quinnburke.net/">Prof.&nbsp;Quinn Burke</a>. Our focus is on building robust systems infrastructure for emerging cloud and edge applications that is secure, reliable, and scalable. We leverage emerging hardware security features and advanced cryptography, integrating techniques in systems building, cryptographic protocol design, and large-scale performance evaluation. We apply these ideas across storage and networking, software supply chains, AI/agentic systems, and other critical infrastructure where trustworthy computation is essential.
+            </p>
 
-  <h1>UA Secure Computing Lab</h1>
-  <p style="color:var(--muted); margin-bottom:1.5rem;">
-    Department of Computer Science &amp; Engineering · University of Arizona · Tucson, AZ
-  </p>
+            <div class="az-callout" id="joining">
+                <i class="fa-solid fa-circle-info" style="flex-shrink:0;"></i>
+                <span>We are recruiting 1–2 fully funded PhD students to join the lab starting Spring/Fall 2027. We are also happy to work with strong M.S., undergraduate, and visiting students/researchers, depending on research fit and available support. If you are interested in working with us, please fill out <a href="https://forms.gle/X6wRA4GPpg1zRSV9A">this form</a>. A brief follow-up email is also welcome (please include "Prospective Student" or "Prospective Researcher" in the subject line).</span>
+            </div>
 
-  <p>
-    The Secure Computing Lab at the University of Arizona develops practical, robust, and scalable
-    systems infrastructure for cloud and edge applications. We draw on advances in
-    <strong>trusted hardware</strong>, <strong>applied cryptography</strong>, and principled
-    system design to build defensive solutions that work at real-world scale. Our work spans
-    confidential computing, secure storage, network security, and emerging challenges in
-    AI infrastructure and software supply chains.
-  </p>
+            <p class="mt-4">Students and researchers who join early will help shape a new research group, working closely with Prof. Burke on ambitious systems security projects and publishing in top security and systems conferences and journals. <b>Curious and self-motivated students and researchers with different backgrounds and levels of experience are all welcome to apply.</b> Strong applicants will usually have experience in one or more of the following areas: computer security, systems programming, distributed systems, cloud computing, applied cryptography, trusted execution environments, cloud storage systems, computer networking, or large-scale performance evaluation. Applicants with strong engineering portfolios, open-source contributions, research experience, or other substantial independent projects are especially encouraged to reach out.
+            </p>
+        </div>
 
-  <p>
-    The lab is led by <a href="https://www.quinnburke.net/">Prof.&nbsp;Quinn Burke</a>, Assistant
-    Professor in the <a href="https://www.cs.arizona.edu/">Department of Computer Science</a>
-    at the University of Arizona.
-    We are always looking for motivated graduate students — see the
-    <a href="https://www.quinnburke.net/prospective/">Prospective Students</a> page for details.
-  </p>
+        <!-- News -->
+        <div class="mb-5">
+            <h2 class="section-title"><i class="fa-solid fa-bullhorn"></i> Recent news</h2>
+            <!-- Lab news only: paper acceptances, students joining, grants, artifact releases.
+                 Personal items (PC service, talks) belong on quinnburke.net. -->
+            <ul class="news-list">
+                <li><span><b>August 2026:</b> The Secure Computing Lab has launched!</span></li>
+            </ul>
+        </div>
 
-  <h2>Research Areas</h2>
+        <!-- Research areas -->
+        <div class="mb-5" id="research">
+            <h2 class="section-title"><i class="fa-solid fa-flask"></i> Research areas</h2>
+            <div class="card-grid">
+                <a class="area-card area-card-toggle" role="button" data-bs-toggle="collapse"
+                   href="#detail-confidential" data-bs-target="#detail-confidential"
+                   aria-expanded="false" aria-controls="detail-confidential">
+                    <div class="area-name"><i class="fa-solid fa-microchip"></i>Confidential Computing</div>
+                    <p>Leveraging trusted execution environments (TEEs) to protect cloud workloads and
+                       enable verifiable computation on sensitive data.</p>
+                    <span class="area-more">Read more <i class="fa-solid fa-chevron-down"></i></span>
+                </a>
+                <a class="area-card area-card-toggle" role="button" data-bs-toggle="collapse"
+                   href="#detail-storage" data-bs-target="#detail-storage"
+                   aria-expanded="false" aria-controls="detail-storage">
+                    <div class="area-name"><i class="fa-solid fa-database"></i>Secure Cloud &amp; Edge Storage</div>
+                    <p>Efficient integrity checking, encrypted file systems, and auditable state management
+                       for cloud and edge storage platforms.</p>
+                    <span class="area-more">Read more <i class="fa-solid fa-chevron-down"></i></span>
+                </a>
+                <a class="area-card area-card-toggle" role="button" data-bs-toggle="collapse"
+                   href="#detail-network" data-bs-target="#detail-network"
+                   aria-expanded="false" aria-controls="detail-network">
+                    <div class="area-name"><i class="fa-solid fa-network-wired"></i>Network Security</div>
+                    <p>Security in software-defined networking (SDN) and cloud environments, including
+                       IP address allocation, load balancing, and multilevel security networks.</p>
+                    <span class="area-more">Read more <i class="fa-solid fa-chevron-down"></i></span>
+                </a>
+                <div class="area-card">
+                    <div class="area-name"><i class="fa-solid fa-chart-line"></i>Observability &amp; Telemetry</div>
+                    <p>Intrusion detection, system monitoring, and tamper-evident telemetry pipelines
+                       for threat detection and response.</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-name"><i class="fa-solid fa-robot"></i>Secure AI Infrastructure</div>
+                    <p>Agent sandboxing, secure AI runtimes, and trustworthy infrastructure for machine
+                       learning workloads and automated pipelines.</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-name"><i class="fa-solid fa-link"></i>Software Supply Chain Security</div>
+                    <p>Verifiable and tamper-evident system designs that protect the integrity of software
+                       from build to deployment.</p>
+                </div>
+            </div>
 
-  <div class="areas-grid">
-    <div class="area-card">
-      <strong>Confidential Computing</strong>
-      <p>Leveraging trusted execution environments (TEEs) to protect cloud workloads and
-         enable verifiable computation on sensitive data.</p>
+            <!-- Detail panels for the three clickable cards above. They live outside the
+                 grid so an open panel spans the full width instead of stretching one
+                 grid row. data-bs-parent makes them mutually exclusive, and Bootstrap's
+                 collapse plugin (already loaded for the navbar) animates the height.
+                 The ids double as the anchors quinnburke.net/research/ used to expose. -->
+            <div id="area-details" class="area-details">
+
+                <div id="detail-confidential" class="collapse" data-bs-parent="#area-details">
+                    <div class="area-detail" id="confidential-computing">
+                        <h3 class="card-heading"><i class="fa-solid fa-microchip"></i> Rollback attacks vs. rollback-as-a-feature</h3>
+
+                        <p>
+                            Confidential computing keeps an application's state protected inside a trusted execution
+                            environment, but that state has to be persisted somewhere the platform does not trust, and
+                            persisted state can always be swapped for an older copy. The security community has studied
+                            this almost entirely through an adversarial lens: rollback is an attack, freshness is the
+                            goal, and a correct system is one that refuses to ever run on stale state. That framing is
+                            incomplete. Rolling a service back to a known‑good state is a routine and often essential DevOps
+                            operation: it is how operators recover from a bad deploy, a corrupted update, or a failed
+                            migration. A design that makes rollback impossible does not only frustrate attackers; it
+                            takes away a recovery path that operators genuinely depend on.
+                        </p>
+                        <p>
+                            Our work resolves that tension by treating rollback as a feature to be secured rather than a
+                            failure to be prevented. We designed cryptographic protocols that separate an authorized
+                            rollback from an adversarial one: state advances through commitments anchored in the
+                            hardware's trust, and rewinding requires explicit authorization that leaves durable evidence
+                            behind. Operators keep the recovery path they need, while a client can still establish which
+                            state it is talking to and whether that state was ever rolled back, and by whom.
+                        </p>
+
+                        <p class="kw-label">Key result</p>
+                        <ul>
+                            <li>Rollback protection and rollback support are not actually in conflict. The right
+                                abstraction is not "prevent every rewind" but "make every rewind authorized and
+                                auditable," which gives confidential deployments a trustworthy recovery path they
+                                previously had to do without.</li>
+                        </ul>
+
+                        <p class="kw-label">Selected publications</p>
+                        <ul>
+                            <li><strong>Quinn Burke</strong>, Anjo Vahldiek-Oberwagner, Michael Swift, and Patrick McDaniel. "It's a Feature, Not a Bug: Secure and Auditable State Rollback for Confidential Cloud Applications." <i>IEEE Symposium on Security and Privacy (S&amp;P), 2026</i>. <a href="https://www.quinnburke.net/papers/2026_ieeesp__rebound.pdf" target="_blank">[PDF]</a> <a href="https://arxiv.org/abs/2511.13641" target="_blank">[arXiv]</a> <a href="https://github.com/MadSP-McDaniel/rebound" target="_blank">[Code]</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="detail-storage" class="collapse" data-bs-parent="#area-details">
+                    <div class="area-detail" id="storage-security">
+                        <h3 class="card-heading"><i class="fa-solid fa-database"></i> Robust, low‑cost security on untrusted storage infrastructure</h3>
+                        <img src="img/hashtree-overview.jpg" alt="Storage security illustration" class="research-img">
+
+                        <p>
+                            Ensuring the integrity of data stored in the cloud is an important element of cloud security, but it requires
+                            executing complex cryptographic checks on data whenever it is read from or written to storage. These checks can degrade
+                            storage performance by up to 90%, rendering the performance capabilities of modern storage devices (e.g., NVMe SSDs)
+                            useless and creating a strong economic incentive for storage administrators to disable protections in practice. Our work
+                            was the first to quantitatively explain why these overheads occur in modern settings: CPU hashing speeds are the
+                            bottleneck (previously hidden by slower disk speeds), overheads increase non‑linearly, and the underlying integrity
+                            data structures are static.
+                        </p>
+                        <p>
+                            Building on this analysis, we designed an optimal data structure that establishes a lower bound on integrity cost for a
+                            given workload profile, then built a new adaptive structure that learns on the fly (without a priori knowledge) and performs
+                            near‑optimally across small‑ and large‑scale storage. In complementary work, we formalized secure deferral of verification by
+                            coupling asynchronous execution to simple commit and admission rules tied to durability, which moves integrity work off the
+                            critical path while remaining hardware anchored and crash consistent, <i>delivering robust integrity protections at near‑zero cost</i>.
+                        </p>
+
+                        <p class="kw-label">Key result</p>
+                        <ul>
+                            <li>This work provided both theoretical and empirical evidence contradicting conventional wisdom about what data structures are necessary and sufficient to protect storage integrity at low cost. It also established a new principled design recipe for systems security researchers demonstrating how to push system optimizations to their limits while remaining within strict security requirements.</li>
+                        </ul>
+
+                        <p class="kw-label">Selected publications</p>
+                        <ul>
+                            <li><strong>Quinn Burke</strong>, Ryan Sheatsley, Yohan Beugin, Eric Pauley, Owen Hines, Michael Swift, and Patrick McDaniel. "Efficient Storage Integrity in Adversarial Settings." <i>IEEE Symposium on Security and Privacy (S&amp;P), 2025</i>. <a href="https://www.quinnburke.net/papers/2025_sp__pac.pdf" target="_blank">[PDF]</a></li>
+                            <li><strong>Quinn Burke</strong>, Ryan Sheatsley, Rachel King, Owen Hines, Michael Swift, and Patrick McDaniel. "On Scalable Integrity Checking For Secure Cloud Disks." <i>USENIX Conference on File and Storage Technologies (FAST), 2025</i>. <a href="https://www.quinnburke.net/papers/2025_fast__dmt.pdf" target="_blank">[PDF]</a></li>
+                            <li><strong>Quinn Burke</strong>, Yohan Beugin, Blaine Hoak, Rachel King, Eric Pauley, Ryan Sheatsley, Mingli Yu, Ting He, Thomas La Porta, and Patrick McDaniel. "Securing Cloud File Systems with Trusted Execution." <i>IEEE Transactions on Dependable and Secure Computing (TDSC), 2024</i>. <a href="https://www.quinnburke.net/papers/2024_tdsc__bfs.pdf" target="_blank">[PDF]</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="detail-network" class="collapse" data-bs-parent="#area-details">
+                    <div class="area-detail" id="network-security">
+                        <h3 class="card-heading"><i class="fa-solid fa-globe"></i> Network security in the modern cloud</h3>
+                        <img src="img/mls-overview.jpg" alt="Network security illustration" class="research-img">
+
+                        <p>
+                            Modern cloud networks increasingly rely on software‑defined networking (SDN), whose programmability enables flexible
+                            control but also creates new security challenges. We have leveraged SDN programmability to enforce secure information‑flow policies
+                            directly in the routing fabric (at every hop), mitigating configuration errors and limiting attacker lateral movement when
+                            endpoint rules are misconfigured or bypassed.
+                        </p>
+                        <p>
+                            We have also examined vulnerabilities arising from SDN's control–data plane separation, showing how strategic manipulations of
+                            inputs to SDN controllers (e.g., traffic load reports from switches) can mislead load balancers and degrade availability while evading state of the art detection mechanisms. Moreover, we have contributed to analyzing side channels
+                            in SDN data planes. These works have produced insights that have informed the design of new defenses for SDN control and data planes.
+                        </p>
+
+                        <p class="kw-label">Key result</p>
+                        <ul>
+                            <li>Our work embedding secure information flow policies in the routing fabric shifted policy enforcement from endpoints into the routing fabric, providing verifiable, hop‑by‑hop information‑flow guarantees that provably prevent lateral movement and data exfiltration attacks.</li>
+                        </ul>
+
+                        <p class="kw-label">Selected publications</p>
+                        <ul>
+                            <li><strong>Quinn Burke</strong>, Fidan Mehmeti, Rahul George, Trent Jaeger, Thomas La Porta, and Patrick McDaniel. "Enforcing Multilevel Security Policies in Unstable Networks." <i>IEEE Transactions on Network and Service Management (TNSM), 2022</i>. <a href="https://www.quinnburke.net/papers/2022_tnsm__relabeling.pdf" target="_blank">[PDF]</a></li>
+                            <li>Mingli Yu, Tian Xie, Ting He, Patrick McDaniel, and <strong>Quinn Burke</strong>. "Flow Table Security in SDN: Adversarial Reconnaissance and Intelligent Attacks." <i>IEEE/ACM Transactions on Networking (TON), 2021</i>. <a href="https://www.quinnburke.net/papers/2021_ton__flow_reconn.pdf" target="_blank">[PDF]</a></li>
+                            <li><strong>Quinn Burke</strong>, Patrick McDaniel, Thomas La Porta, Mingli Yu, and Ting He. "Misreporting Attacks in Software‑Defined Networking." <i>International Conference on Security and Privacy in Communication Networks (SecureComm), 2020</i>. <a href="https://www.quinnburke.net/papers/2020_securecomm__sdn_misreporting.pdf" target="_blank">[PDF]</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
-    <div class="area-card">
-      <strong>Secure Cloud &amp; Edge Storage</strong>
-      <p>Efficient integrity checking, encrypted file systems, and auditable state management
-         for cloud and edge storage platforms.</p>
-    </div>
-    <div class="area-card">
-      <strong>Network Security</strong>
-      <p>Security in software-defined networking (SDN) and cloud environments, including
-         IP address allocation, load balancing, and multilevel security networks.</p>
-    </div>
-    <div class="area-card">
-      <strong>Observability &amp; Telemetry</strong>
-      <p>Intrusion detection, system monitoring, and tamper-evident telemetry pipelines
-         for threat detection and response.</p>
-    </div>
-    <div class="area-card">
-      <strong>Secure AI Infrastructure</strong>
-      <p>Agent sandboxing, secure AI runtimes, and trustworthy infrastructure for machine
-         learning workloads and automated pipelines.</p>
-    </div>
-    <div class="area-card">
-      <strong>Software Supply Chain Security</strong>
-      <p>Verifiable and tamper-evident system designs that protect the integrity of software
-         from build to deployment.</p>
-    </div>
-  </div>
 
-  <h2>News &amp; Announcements</h2>
-  <ul>
-    <li>
-      <strong>2026</strong> — Our paper
-      <em>"It's a Feature, Not a Bug: Secure and Auditable State Rollback for Confidential Cloud Applications"</em>
-      will appear at <strong>IEEE S&amp;P 2026</strong>.
-    </li>
-    <li>
-      <strong>2026</strong> — Invited paper
-      <em>"Fast Integrity Checking for Secure Cloud Storage: A Quantitative Approach"</em>
-      accepted to <strong>ACM TOCS 2026</strong>.
-    </li>
-    <li>
-      <strong>2025</strong> — Two papers accepted at <strong>IEEE S&amp;P 2025</strong>
-      and <strong>USENIX FAST 2025</strong>.
-    </li>
-  </ul>
+    <footer class="az-footer py-4">
+        <div class="container container-narrow px-3 d-flex flex-wrap justify-content-between gap-2 small">
+            <span>© 2026 Secure Computing Lab</span>
+            <span><a href="https://cs.arizona.edu/">Department of Computer Science</a> · <a href="https://www.arizona.edu/">The University of Arizona</a></span>
+        </div>
+    </footer>
 
-</main>
-
-<footer>
-  &copy; 2026 UA Secure Computing Lab &nbsp;·&nbsp;
-  <a href="https://www.cs.arizona.edu/">University of Arizona Computer Science</a> &nbsp;·&nbsp;
-  <a href="https://github.com/UA-Secure-Computing-Lab">GitHub</a>
-</footer>
-
+    <script src="https://cdn.digital.arizona.edu/lib/arizona-bootstrap/5.1.1/js/arizona-bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
