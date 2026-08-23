@@ -38,13 +38,18 @@
 
     <div class="container container-narrow mt-4 pb-5 px-3">
 
-        <!-- Lab header -->
-        <div class="mb-4">
-            <h1 class="name-title">Secure Computing Lab</h1>
-            <p class="subtitle">
-                <a href="https://cs.arizona.edu/">Department of Computer Science</a><br><a href="https://www.arizona.edu/">University of Arizona</a>
-            </p>
-            <div class="contact-row"><i class="fa-solid fa-envelope"></i><a href="mailto:qkb@arizona.edu">qkb@arizona.edu</a></div>
+        <!-- Lab header. Same two-column arrangement as the profile block on
+             quinnburke.net: text left, image right, and flex-wrap-reverse so the
+             image stacks above the text rather than below it on narrow screens. -->
+        <div class="d-flex flex-wrap-reverse justify-content-between align-items-center gap-4 mb-4">
+            <div style="flex: 1; min-width: 240px;">
+                <h1 class="name-title">Secure Computing Lab</h1>
+                <p class="subtitle">
+                    <a href="https://cs.arizona.edu/">Department of Computer Science</a><br><a href="https://www.arizona.edu/">University of Arizona</a>
+                </p>
+                <div class="contact-row"><i class="fa-solid fa-envelope"></i><a href="mailto:qkb@arizona.edu">qkb@arizona.edu</a></div>
+            </div>
+            <img src="img/logo.png" alt="Secure Computing Lab logo" class="lab-logo">
         </div>
 
         <!-- About -->

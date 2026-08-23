@@ -255,6 +255,24 @@ body {
    .pub-entry above (white panel, hairline border, red left rule), so the
    grids read as the same system as the publication list. */
 
+/* ── Lab logo ──
+   The personal site's .profile-img is a square with object-fit: cover, which
+   would crop a 16:9 logo. This sizes by width and lets height follow, so the
+   artwork is never cut. The logo ships with an opaque near-white background
+   rather than transparency, so it needs a hairline border to define its edge
+   against the #f5f5f5 page; the radius and shadow match .profile-img so the two
+   site headers read as the same treatment. */
+.lab-logo {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    box-shadow: 0 6px 24px rgba(12, 35, 75, 0.18);
+    flex-shrink: 0;
+}
+
 /* ── Research areas / topic cards ── */
 .card-grid {
     display: grid;
