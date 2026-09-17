@@ -287,8 +287,8 @@ body {
     padding: 1.1rem 1.3rem;
     transition: box-shadow 0.2s;
 }
-/* Only the three expandable cards lift on hover; a hover response on the static
-   three would advertise a click that does nothing. */
+/* Only the two expandable cards lift on hover; a hover response on the static
+   AI card would advertise a click that does nothing. */
 .area-card-toggle:hover { box-shadow: 0 4px 16px rgba(12, 35, 75, 0.12); }
 .area-card .area-name {
     font-weight: 700;

@@ -86,44 +86,24 @@
                    href="#detail-confidential" data-bs-target="#detail-confidential"
                    aria-expanded="false" aria-controls="detail-confidential">
                     <div class="area-name"><i class="fa-solid fa-microchip"></i>Confidential Computing</div>
-                    <p>Leveraging trusted execution environments (TEEs) to protect cloud workloads and
-                       enable verifiable computation on sensitive data.</p>
+                    <p>Leveraging trusted execution environments (TEEs) to protect cloud workloads.</p>
                     <span class="area-more">Read more <i class="fa-solid fa-chevron-down"></i></span>
                 </a>
                 <a class="area-card area-card-toggle" role="button" data-bs-toggle="collapse"
-                   href="#detail-storage" data-bs-target="#detail-storage"
-                   aria-expanded="false" aria-controls="detail-storage">
-                    <div class="area-name"><i class="fa-solid fa-database"></i>Secure Cloud &amp; Edge Storage</div>
-                    <p>Efficient integrity checking, encrypted file systems, and auditable state management
-                       for cloud and edge storage platforms.</p>
+                   href="#detail-cloud" data-bs-target="#detail-cloud"
+                   aria-expanded="false" aria-controls="detail-cloud">
+                    <div class="area-name"><i class="fa-solid fa-cloud"></i>Cloud Security</div>
+                    <p>Securing cloud infrastructure and software-defined networks (SDNs).</p>
                     <span class="area-more">Read more <i class="fa-solid fa-chevron-down"></i></span>
                 </a>
-                <a class="area-card area-card-toggle" role="button" data-bs-toggle="collapse"
-                   href="#detail-network" data-bs-target="#detail-network"
-                   aria-expanded="false" aria-controls="detail-network">
-                    <div class="area-name"><i class="fa-solid fa-network-wired"></i>Network Security</div>
-                    <p>Security in software-defined networking (SDN) and cloud environments, including
-                       IP address allocation, load balancing, and multilevel security networks.</p>
-                    <span class="area-more">Read more <i class="fa-solid fa-chevron-down"></i></span>
-                </a>
-                <div class="area-card">
-                    <div class="area-name"><i class="fa-solid fa-chart-line"></i>Observability &amp; Telemetry</div>
-                    <p>Intrusion detection, system monitoring, and tamper-evident telemetry pipelines
-                       for threat detection and response.</p>
-                </div>
                 <div class="area-card">
                     <div class="area-name"><i class="fa-solid fa-robot"></i>Secure AI Infrastructure</div>
-                    <p>Agent sandboxing, secure AI runtimes, and trustworthy infrastructure for machine
-                       learning workloads and automated pipelines.</p>
-                </div>
-                <div class="area-card">
-                    <div class="area-name"><i class="fa-solid fa-link"></i>Software Supply Chain Security</div>
-                    <p>Verifiable and tamper-evident system designs that protect the integrity of software
-                       from build to deployment.</p>
+                    <p>Bringing hardware-based security mechanisms to to AI systems (agent sandboxing, secure runtimes, verifiable AI pipelines).</p>
                 </div>
             </div>
 
-            <!-- Detail panels for the three clickable cards above. They live outside the
+            <!-- Detail panels for the two clickable cards above. Confidential Computing opens
+                 two write-ups (rollback, then storage integrity). They live outside the
                  grid so an open panel spans the full width instead of stretching one
                  grid row. data-bs-parent makes them mutually exclusive, and Bootstrap's
                  collapse plugin (already loaded for the navbar) animates the height.
@@ -167,9 +147,7 @@
                             <li><strong>Quinn Burke</strong>, Anjo Vahldiek-Oberwagner, Michael Swift, and Patrick McDaniel. "It's a Feature, Not a Bug: Secure and Auditable State Rollback for Confidential Cloud Applications." <i>IEEE Symposium on Security and Privacy (S&amp;P), 2026</i>. <a href="https://www.quinnburke.net/papers/2026_ieeesp__rebound.pdf" target="_blank">[PDF]</a> <a href="https://arxiv.org/abs/2511.13641" target="_blank">[arXiv]</a> <a href="https://doi.org/10.1109/SP63933.2026.00148" target="_blank">[DOI]</a> <a href="https://github.com/MadSP-McDaniel/rebound" target="_blank">[Code]</a></li>
                         </ul>
                     </div>
-                </div>
 
-                <div id="detail-storage" class="collapse" data-bs-parent="#area-details">
                     <div class="area-detail" id="storage-security">
                         <h3 class="card-heading"><i class="fa-solid fa-database"></i> Robust, low‑cost security on untrusted storage infrastructure</h3>
                         <img src="img/hashtree-overview.jpg" alt="Storage security illustration" class="research-img">
@@ -205,7 +183,7 @@
                     </div>
                 </div>
 
-                <div id="detail-network" class="collapse" data-bs-parent="#area-details">
+                <div id="detail-cloud" class="collapse" data-bs-parent="#area-details">
                     <div class="area-detail" id="network-security">
                         <h3 class="card-heading"><i class="fa-solid fa-globe"></i> Network security in the modern cloud</h3>
                         <img src="img/mls-overview.jpg" alt="Network security illustration" class="research-img">
